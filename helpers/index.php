@@ -14,4 +14,28 @@ function base_url(){
     // Imprimir la base URL
     return $base_url;
 }
+
+// Función para cargar las variables de entorno desde el archivo .env
+function cargarVariablesEnv($rutaArchivoEnv) {
+    // Leer el archivo .env línea por línea
+    $lineas = file($rutaArchivoEnv, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    
+    if ($lineas === false) {
+        throw new Exception("No se pudo leer el archivo .env");
+    }
+    
+    // Inicializar un array para almacenar las variables de entorno
+    $variablesEnv = array();
+    
+    foreach ($lineas as $linea) {
+        // Separar la línea en el nombre y el valor de la variable
+        list($nombre, $valor) = explode('=', $linea, 2);
+        // Asignar la variable de entorno
+        $variablesEnv[$nombre] = $valor;
+    }
+
+    return $variablesEnv;
+}
+
+
 ?>
