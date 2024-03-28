@@ -1,3 +1,23 @@
+Guía para Clonar repositorio de GitHub
+
+1-  Instalar Git: Si aún no tienes Git instalado en tu sistema, debes hacerlo. Puedes descargar e instalar Git desde https://git-scm.com/.
+
+2-  Abre tu Terminal o CMD: Abre tu terminal o línea de comandos. Esto puede ser la Terminal en macOS/Linux o el CMD en Windows.
+
+3-  Navega al directorio donde quieres clonar el repositorio: Utiliza el comando cd para navegar al directorio en tu sistema de archivos donde deseas que se clone el repositorio. Por ejemplo:
+
+cd ruta/a/directorio/deseado
+
+4-  Clonar el repositorio: Utiliza el comando git clone seguido de la URL del repositorio que deseas clonar. En este caso, la URL del repositorio usaservice es https://github.com/sebastiancordovaw2/usaservice. Entonces, ejecuta el siguiente comando:
+
+
+git clone https://github.com/sebastiancordovaw2/usaservice
+Esto descargará todos los archivos del repositorio usaservice en el directorio actual.
+
+5-  Accede al directorio del repositorio: Una vez que el clonado haya finalizado, puedes acceder al directorio del repositorio usando el comando cd. Por ejemplo:
+
+cd usaservice
+
 Guía de Instalación del Proyecto con PHP 8.0.30 y mysql 10.4.32-MariaDB
 
 
