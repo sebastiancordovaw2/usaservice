@@ -16,7 +16,7 @@ Esto descargará todos los archivos del repositorio usaservice en el directorio 
 
 5-  Accede al directorio del repositorio: Una vez que el clonado haya finalizado, puedes acceder al directorio del repositorio usando el comando cd. Por ejemplo:
 
-cd usaservice
+::cd usaservice
 
 Guía de Instalación del Proyecto con PHP 8.0.30 y mysql 10.4.32-MariaDB
 
