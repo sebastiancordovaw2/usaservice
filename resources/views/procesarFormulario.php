@@ -1,7 +1,7 @@
 <?php
 
 // Incluir el archivo de configuración de la base de datos, que establece la conexión y la guarda en $conexion.
-require_once '../../config/db.php';
+require_once '../../config/dbAjax.php';
 // Incluir el controlador de votación para manejar las acciones relacionadas con las votaciones.
 require_once '../controller/VotacionController.php';
 
