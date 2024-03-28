@@ -1,6 +1,9 @@
 <?php
-
-    $rutaArchivoEnv = '../.env';
+    
+ 
+    include_once '../../helpers/index.php';
+    $rutaArchivoEnv = '../../.env';
+   
     // Cargar las variables de entorno desde el archivo .env
     try {
         $variablesEnv = cargarVariablesEnv($rutaArchivoEnv);
