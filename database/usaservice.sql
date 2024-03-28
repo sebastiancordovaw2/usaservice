@@ -86,7 +86,7 @@ INSERT INTO `candidato` (`id_city`, `nombre`, `partido_politico`, `fecha_de_naci
 (12, 'Laura Espinoza', 'Partido Innovación Nacional', '1983-09-19', 'Gobernadora Regional', 'Laura es ingeniera civil con un máster en gestión pública. Se enfoca en el desarrollo sustentable y la innovación tecnológica para el crecimiento de Coyhaique.', 'https://example.com/fotos/lauraespinoza.jpg', 'https://lauraespinoza.com', 'laura.espinoza@example.com', '555-9876'),
 (13, 'Manuel Torres', 'Partido Democrático', '1975-06-11', 'Alcalde', 'Manuel ha dedicado su carrera a la educación y el desarrollo comunitario en Iquique, promoviendo proyectos de inclusión y mejoramiento urbano.', 'https://example.com/fotos/manueltorres.jpg', 'https://manueltorres.com', 'manuel.torres@example.com', '555-6543');
 
-#almacenar los datos de las personas votan
+#almacenar los datos de las personas que votan
 CREATE TABLE personas (
   `id_persona` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(50) NOT NULL,
