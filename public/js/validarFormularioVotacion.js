@@ -69,7 +69,7 @@ $(document).ready(function () {
                         icon: 'success',
                         confirmButtonText: 'Ok'
                       });
-                      resetForm()
+                      resetForm();
                 },
                 error: function(xhr, status, elerror) {
                     // Manejar errores de la petición AJAX

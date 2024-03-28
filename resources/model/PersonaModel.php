@@ -25,9 +25,10 @@ class Persona {
             return $this->db->insert_id;
         } else {
             // Es una buena práctica cerrar la sentencia si no se hubiese hecho.
-            $stmt->close();
+           
             // En caso de fallo en la inserción, lanza una excepción con el mensaje de error y cierra la sentencia.
-            throw new Exception("Error al insertar datos: " . $stmt->error);
+            throw new Exception("Error al insertar datos: " . $stmt->error); 
+            $stmt->close();
 
             
         }
