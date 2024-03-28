@@ -1,0 +1,23 @@
+Guía de Instalación del Proyecto con PHP 8.0.30 y mysql 10.4.32-MariaDB
+
+
+ 1-   Instalación de XAMPP: Descarga e instala XAMPP para obtener MySQL y Apache. XAMPP es un paquete que contiene Apache Server, MariaDB (MySQL), PHP y Perl.
+
+ 2-   Creación de las Tablas de la Base de Datos: Una vez instalado XAMPP, localiza el archivo usaservice.sql dentro de la carpeta database del proyecto clonado. Este archivo contiene las instrucciones para crear las tablas necesarias en tu base de datos.
+
+ 3-   Ejecución de XAMPP: Abre XAMPP y activa los servicios de Apache y MySQL. Esto permitirá que tu servidor local y la base de datos estén funcionando.
+
+ 4-   Colocación de los Archivos del Proyecto: Mueve los archivos del proyecto clonado a la carpeta htdocs dentro del directorio de instalación de XAMPP. Esta acción hace que los archivos sean accesibles a través de un navegador web.
+
+ 5-   Acceso al Proyecto: Abre un navegador web y escribe localhost seguido de la ruta hacia la carpeta del proyecto dentro de htdocs. Ten en cuenta que el punto de entrada del proyecto se encuentra en la carpeta public.
+
+ 6-   Configuración del Archivo .env: Crea un archivo .env en la raíz del proyecto para configurar los detalles de conexión a la base de datos. El contenido debe ser similar al siguiente, ajustando los valores según sea necesario:
+
+
+HOST=localhost
+DB=usaservice
+USER=root
+PASS=
+
+Este archivo .env permite al proyecto conectarse a la base de datos usando las credenciales proporcionadas.
+
