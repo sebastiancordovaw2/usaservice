@@ -63,17 +63,39 @@ $(document).ready(function () {
                 url: '../resources/views/procesarFormulario.php', // Aquí debes especificar la URL a la que enviarás el formulario
                 data: $('#votacion').serialize(),
                 success: function(response) {
-                    // Manejar la respuesta del servidor
-                    console.log(response);
-                    // Por ejemplo, puedes mostrar un mensaje de éxito o redirigir a otra página
+                    Swal.fire({
+                        title: 'A buena hora!',
+                        text: 'Su voto se ha ingreso Correctamente',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                      });
+                      resetForm()
                 },
-                error: function(xhr, status, error) {
+                error: function(xhr, status, elerror) {
                     // Manejar errores de la petición AJAX
-                    console.error(error);
+                    if(elerror == "Conflict")
+                    {
+                        Swal.fire({
+                            title: '¡Alerta!',
+                            text: 'El usuario con rut '+$("#rut").val()+' ya ha votado',
+                            icon: 'danger',
+                            confirmButtonText: 'Ok'
+                          });
+
+                          $("#rut").val("");
+                    }
+                    
                 }
             });
         }
     });
+
+    function resetForm()
+    {
+        $('#votacion').find('input:text, input:password, input:file, select, textarea').val('');
+        $('#votacion').find('input:radio, input:checkbox').prop('checked', false);
+        $('#votacion').find('select').prop('selectedIndex', 0)
+    }
 
     // Método de validación para Rut chileno
     $.validator.addMethod("rut", function(value, element) {
@@ -107,6 +129,8 @@ $(document).ready(function () {
             }
         });
     });
+
+   
 
 
     $("#comuna").change(function(){

@@ -45,8 +45,15 @@ class VotacionController {
            }
         }
 
+        try {
         $id_persona = $this->persona->insertarPersona($nombre, $apellido, $alias, $rut, $email, $comuna);
-        //$this->modelo->insertarVotacion($candidato, $id_persona, $web, $tv, $redes_sociales, $amigo);
+        $this->votacion->insertarVotacion($candidato, $id_persona, $web, $tv, $redes_sociales, $amigo);
+        } catch (Exception $e) {
+            http_response_code(409);
+            echo "Error: " . $e->getMessage();
+            // Aquí puedes mostrar un mensaje al usuario o realizar otras acciones, como registrar el error en un archivo de registro
+        }
+        
     }
 }
 

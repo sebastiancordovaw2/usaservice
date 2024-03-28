@@ -8,6 +8,7 @@ $selectOptions = $Regiones->selectDeRegiones();
 ?>
 
 <form id="votacion" method="post" class="max-w-md mx-auto bg-white p-8 mt-10 rounded shadow-md">
+    <input type="hidden" name="enviarFormulario" value="true">
     <label for="nombre" class="block mt-2 mb-1">Nombre:</label>
     <input type="text" id="nombre" name="nombre" required class="w-full px-3 py-2 mb-2 leading-tight border rounded appearance-none focus:outline-none focus:shadow-outline">
 

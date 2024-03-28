@@ -14,9 +14,10 @@ class Persona {
             // Devuelve el ID del último usuario insertado
             return $this->db->insert_id;
         } else {
-            $stmt->close();
+       
             // Devuelve false si la inserción falla
-            return false;
+            throw new Exception("Error al insertar datos: " . $stmt->error);
+            $stmt->close();
         }
     }
 }
