@@ -1,6 +1,6 @@
 <?php
-class Comuna {
-    private $id_city;
+class Candidato {
+    private $id;
     private $name;
     
     private $db;
@@ -8,8 +8,8 @@ class Comuna {
         $this->db = $dbConnection;
     }
 
-    public function obtenerComunas($region) {
-        $query = "SELECT id_city, name FROM cities where id_region = $region";
+    public function obtenerCandidatos($comuna) {
+        $query = "SELECT id_candidato, nombre, partido_politico, fecha_de_nacimiento, cargo_postulado, biografia, email, telefono FROM candidato where id_city = $comuna";
         $result = $this->db->query($query);
 
         $comunas = array();

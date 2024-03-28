@@ -33,14 +33,14 @@ $selectOptions = $Regiones->selectDeRegiones();
     <label for="comuna" class="block mt-2 mb-1">Comuna:</label>
     <select id="comuna" name="comuna" class="w-full px-3 py-2 mb-2 leading-tight border rounded appearance-none focus:outline-none focus:shadow-outline">
         <option value="">Seleccione una Comuna</option>
-        <option value="1">Seleccione una Región</option>
+
         <!-- Opciones de comunas -->
     </select>
 
     <label for="candidato" class="block mt-2 mb-1">Candidato:</label>
     <select id="candidato" name="candidato" class="w-full px-3 py-2 mb-2 leading-tight border rounded appearance-none focus:outline-none focus:shadow-outline">
         <option value="">Seleccione un Candidato</option>
-        <option value="1">Seleccione una Región</option>
+
         <!-- Opciones de candidatos -->
     </select>
 

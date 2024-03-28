@@ -107,4 +107,27 @@ $(document).ready(function () {
             }
         });
     });
+
+
+    $("#comuna").change(function(){
+        var selectedComuna = $(this).val();
+        
+        $("#candidato").empty();
+        $('#candidato').append('<option value="">Seleccione un Candidato</option>');
+        $.ajax({
+            type: "GET",
+            url: "../resources/views/procesarFormulario.php", // El archivo PHP que procesará la solicitud
+            data: { comuna: selectedComuna, candidatos:true }, // Los datos que se enviarán al servidor
+            success: function(response){
+                // Manejar la respuesta del servidor aquí
+                $("#candidato").append(response);
+            },
+            error: function(xhr, status, error){
+                // Manejar errores de AJAX aquí
+                console.error(xhr.responseText);
+                $("#candidato").empty();
+                
+            }
+        });
+    });
 });

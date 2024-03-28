@@ -4,21 +4,23 @@ require_once '../../config/db.php';
 require_once '../controller/VotacionController.php';
 
 
-if($_POST)
+if(isset($_POST["enviarFormulario"]))
 {
     $votacionController = new VotacionController($conexion);
     $votacionController->registrar();
 }
-else if($_GET["comunas"])
+else if(isset($_GET["comunas"]))
 {
     require_once '../controller/ComunaController.php';
     $comunasController = new ComunaController($conexion);
     $comunasController->selectDeComunas($_GET["region"]);
 
 }
-else if($_GET["candidatos"])
+else if(isset($_GET["candidatos"]))
 {
-
+    require_once '../controller/CandidatoController.php';
+    $candidatoController = new CandidatoController($conexion);
+    $candidatoController->selectDeCandidatos($_GET["comuna"]);
 }
 
 

@@ -9,7 +9,7 @@ public function __construct($dbConnection) {
 function selectDeComunas($region, $selectedValue = null) 
 {
     $options = '';
-    $data = $this->comuna->obtenerRegiones($region);
+    $data = $this->comuna->obtenerComunas($region);
     foreach ($data as $item) {
         $value = $item["id_city"];
         $label = $item["name"];
