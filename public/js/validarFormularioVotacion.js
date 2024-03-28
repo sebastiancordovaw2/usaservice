@@ -130,9 +130,6 @@ $(document).ready(function () {
         });
     });
 
-   
-
-
     $("#comuna").change(function(){
         var selectedComuna = $(this).val();
         
@@ -150,7 +147,6 @@ $(document).ready(function () {
                 // Manejar errores de AJAX aquí
                 console.error(xhr.responseText);
                 $("#candidato").empty();
-                
             }
         });
     });
