@@ -60,7 +60,7 @@ $(document).ready(function () {
             // Enviar el formulario por AJAX
             $.ajax({
                 type: 'POST',
-                url: '../resources/views/procesarFormulario.php', // Aquí debes especificar la URL a la que enviarás el formulario
+                url: '../resources/views/procesarFormulario.php', // Aquí se especifa la URL a la que se enviara el formulario
                 data: $('#votacion').serialize(),
                 success: function(response) {
                     Swal.fire({
@@ -111,6 +111,7 @@ $(document).ready(function () {
     $("#region").change(function(){
         var selectedRegion = $(this).val();
         
+        //vaciar el selector de comuna
         $("#comuna").empty();
         $('#comuna').append('<option value="">Seleccione una Comuna</option>');
         $.ajax({
@@ -119,6 +120,7 @@ $(document).ready(function () {
             data: { region: selectedRegion, comunas:true }, // Los datos que se enviarán al servidor
             success: function(response){
                 // Manejar la respuesta del servidor aquí
+                //agrega las opciones que busco en la base de datos
                 $("#comuna").append(response);
             },
             error: function(xhr, status, error){
@@ -132,7 +134,7 @@ $(document).ready(function () {
 
     $("#comuna").change(function(){
         var selectedComuna = $(this).val();
-        
+        //vaciar el selector de comuna
         $("#candidato").empty();
         $('#candidato').append('<option value="">Seleccione un Candidato</option>');
         $.ajax({
@@ -141,6 +143,7 @@ $(document).ready(function () {
             data: { comuna: selectedComuna, candidatos:true }, // Los datos que se enviarán al servidor
             success: function(response){
                 // Manejar la respuesta del servidor aquí
+                //agrega las opciones que busco en la base de datos
                 $("#candidato").append(response);
             },
             error: function(xhr, status, error){

@@ -12,6 +12,7 @@
     <!---Se agrega la cdn de jQuery------>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+     <!---Se agrega la cdn de Sweet Alert------>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="<?=base_url()?>js/validarFormularioVotacion.js"></script>
