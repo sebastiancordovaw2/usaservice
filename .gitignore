@@ -1,7 +1,7 @@
 # Ignorar archivos de sistema operativo
 .DS_Store
 Thumbs.db
-.env
+
 
 # Ignorar archivos de respaldo creados por editores de texto
 *~
@@ -15,3 +15,4 @@ Thumbs.db
 /build/
 /bin/
 /node_modules/
+.env
