@@ -6,14 +6,13 @@ require_once '../controller/VotacionController.php';
 
 if($_POST)
 {
-    echo "entra";
     $votacionController = new VotacionController($conexion);
     $votacionController->registrar();
 }
 else if($_GET["comunas"])
 {
-    require_once '../controller/ComunasController.php';
-    $comunasController = new VotacionController($conexion);
+    require_once '../controller/ComunaController.php';
+    $comunasController = new ComunaController($conexion);
     $comunasController->selectDeComunas($_GET["region"]);
 
 }

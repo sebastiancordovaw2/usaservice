@@ -84,4 +84,27 @@ $(document).ready(function () {
     $.validator.addMethod("alphanumeric", function(value, element) {
         return this.optional(element) || /^(?=.*[a-zA-Z])(?=.*\d).+$/.test(value);
     }, "Por favor ingresa al menos una letra y un número");
+
+
+    $("#region").change(function(){
+        var selectedRegion = $(this).val();
+        
+        $("#comuna").empty();
+        $('#comuna').append('<option value="">Seleccione una Comuna</option>');
+        $.ajax({
+            type: "GET",
+            url: "../resources/views/procesarFormulario.php", // El archivo PHP que procesará la solicitud
+            data: { region: selectedRegion, comunas:true }, // Los datos que se enviarán al servidor
+            success: function(response){
+                // Manejar la respuesta del servidor aquí
+                $("#comuna").append(response);
+            },
+            error: function(xhr, status, error){
+                // Manejar errores de AJAX aquí
+                console.error(xhr.responseText);
+                $("#comuna").empty();
+                
+            }
+        });
+    });
 });

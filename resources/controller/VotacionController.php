@@ -46,7 +46,7 @@ class VotacionController {
         }
 
         $id_persona = $this->persona->insertarPersona($nombre, $apellido, $alias, $rut, $email, $comuna);
-        $this->modelo->insertarVotacion($candidato, $id_persona, $web, $tv, $redes_sociales, $amigo);
+        //$this->modelo->insertarVotacion($candidato, $id_persona, $web, $tv, $redes_sociales, $amigo);
     }
 }
 
