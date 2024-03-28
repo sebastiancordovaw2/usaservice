@@ -93,7 +93,7 @@ CREATE TABLE personas (
   `apellido` VARCHAR(50) NOT NULL,
   `alias` VARCHAR(50),
   `rut` VARCHAR(12) NOT NULL UNIQUE,
-  `email` VARCHAR(100) NOT NULL UNIQUE,
+  `email` VARCHAR(100) NOT NULL,
   `id_city` INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`id_persona`),
   KEY `FK_personas_cities` (`id_city`),
